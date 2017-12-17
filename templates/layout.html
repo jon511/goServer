@@ -8,8 +8,10 @@
         }
     </style>
     <title>Layout</title>
+    <script src="javascript/index.js" type="text/javascript"></script>
 </head>
 <body>
+    {{template "header" .}}
     <h1>{{.PageTitle}}</h1>
     <ul>
         {{range .Todos}}
@@ -20,5 +22,6 @@
              {{end}}
         {{end}}
     </ul>
+{{template "footer" .}}
 </body>
 </html>

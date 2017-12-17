@@ -12,6 +12,8 @@ func main() {
 
 	http.HandleFunc("/layout", handleTemplate)
 
+	http.HandleFunc("/db", handleDbRequest)
+
 	fmt.Println("Listening on port 8080.....")
 	err := http.ListenAndServe(":8080", nil)
 	if err != nil {
